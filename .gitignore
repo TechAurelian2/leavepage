@@ -1,0 +1,15 @@
+# tailwindcss output file
+page/css/output.css
+
+# dependencies installed by npm
+node_modules/
+package-lock.json
+
+# vscode (IDE) generated files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!*.code-snippets
+*.code-workspace

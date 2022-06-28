@@ -1,0 +1,16 @@
+{
+  "name": "leavepage",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "clean": "rm ./page/css/output.css",
+    "start": "npx tailwindcss -i ./page/css/input.css -o ./page/css/output.css --watch",
+    "build": "npx tailwindcss -i ./page/css/input.css -o ./page/css/output.css --minify"
+  },
+  "author": "TechAurelian",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.1.4"
+  }
+}

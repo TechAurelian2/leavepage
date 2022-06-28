@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>leave page</title>
+  <meta name="description" content="Just leave the page (go to other tab, or minimize the browser), and see the reaction.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <link href="/css/output.css" rel="stylesheet">
+
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FTKXMLDZVX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FTKXMLDZVX');
+  </script>
+</head>
+
+<body class="antialiased bg-white text-black">
+  <header hidden id="portrait" class="absolute animate-[display-fade_2s_ease-in-out_1] right-4 top-4">
+    <a href="https://www.youtube.com/watch?v=9uicvPZSKIM" target="_blank" rel="noopener" aria-label="Somewhere in Time">
+      <img class="rounded-full grayscale w-16 mx-auto" src="/img/somewhere-in-time.jpg" alt="Somewhere in Time" />
+    </a>
+  </header>
+  <main class="flex h-screen items-center justify-center px-4 text-center">
+    <div id="confirmationPanel" class="">
+      <p class="mb-8 sm:text-6xl text-4xl">is your sound on?</p>
+      <button class="button" id="soundOnButton">yes, it is</button>
+    </div>
+
+    <div hidden id="instructionsPanel" class="animate-[display-fade_2s_ease-in-out_1] space-y-8">
+      <p>
+        <a class="button" href="https://techaurelian.com" target="_blank" rel="noopener">leave page</a>
+      </p>
+      <p class="leading-normal sm:text-4xl text-3xl">go to another tab or app or minimize the window</p>
+    </div>
+
+    <audio id="comeBackAudio">
+      <source src="/audio/come-back-to-me.wav" type="audio/wav">
+    </audio>
+  </main>
+
+  <footer class="absolute bottom-0 left-0 p-4 right-0 text-center">
+    <p class="mt-4">made by <a href="https://techaurelian.com/" target="_blank" class="link">TechAurelian</a> for the <a href="https://dusty.domains/" target="_blank" class="link">dusty domains</a> initiative. <br class="sm:hidden"><a href="https://github.com/TechAurelian/leavepage" target="_blank" class="link">view source</a></p>
+  </footer>
+
+  <script src="/js/app.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function (reg) {
+          console.log('Service Worker registration successful with scope: ' + reg.scope);
+        }).catch(function (error) {
+          console.log('Service Worker registration failed with ' + error);
+        });
+    }
+  </script>
+
+</body>
+
+</html>

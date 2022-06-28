@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+
+@layer components {
+
+  .button {
+    @apply bg-black inline-block leading-relaxed pb-2 px-16 rounded-lg text-4xl text-white;
+  }
+
+  .link {
+    @apply underline;
+  }
+
+  @keyframes display-fade {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+  }
+}
+
+@layer utilities {
+}
